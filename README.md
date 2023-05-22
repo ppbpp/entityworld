@@ -41,11 +41,11 @@ Note taking in its current form is just a view into "knowledge structuring" whic
 Some concrete applications of entity modeling
 
 ### Mobile note taking app
-An obvious use case I'm trying to solve personally is "dumb Evernote" style note taking with the ability to model entity purely via text entry. I want it to be as easy as tags and to "gracefully degrade" down to regular text editing for those who just want a flat note taking app. 
+An obvious use case I'm trying to solve personally is "dumb Evernote" style note taking with the ability to model entity purely via text entry. I want it to be as easy as tags and to "gracefully degrade" down to regular text editing for those who just want a flat note taking app. But to also allow entity modeling and linking.
 
 ### Keyboard app
 This would be cool with the above, but can we hack a custom keyboard to help us with entity creation and retrieval? It's unaware of what app it's running in. But it still gives us access to everything the user types allowing us to create entity relationships or allow entering of information from existing entity storage. 
 
-The most basic use case is detecting use of a special character and offering entity creation. But, we can also e.g. create notes as we are talking about something in a WhatsApp conversation. Or try to recall something we took notes on. And eg with something like Apple's `CFStringTokenizer`, we can have some fun parsing what's being typed to.
+The most basic use case is detecting use of a special character and offering entity creation. But, we can also e.g. create notes as we are talking about something in a WhatsApp conversation. Or try to recall something we took notes on. And eg with something like Apple's `CFStringTokenizer`, we can have some fun parsing what's being typed, and instead of requesting special characters, start mapping entities via NLP. 
 
 The GPL license really helps here: there are sweeping privacy implications, so we want to be very open about what's happening.
