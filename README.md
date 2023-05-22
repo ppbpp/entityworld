@@ -1,6 +1,8 @@
 # entityworld
 documenting ideas around digitally modeling knowledge as a graph based system, with an eye towards note taking and beyond
 
+<img src="https://i.imgur.com/WntCEzE.jpg">
+
 ## Core abstractions: entities and connections
 Entities are sort like a platonic ideal. Except of course ideals don't exist; there is no chairness of a chair, there's only a pile of wood, and monkeys that decided to come up with a name for the same butt supporting pile of wood.  Without disappearing down an epistemological rabbit hole, we can generally agree human knowledge is recursively defined. 
 
