@@ -4,21 +4,25 @@ documenting ideas around digitally modeling knowledge as a graph based system, w
 ## Core abstractions: entities and connections
 Entities are sort like a platonic ideal. Except of course ideals don't exist; there is no chairness of a chair, there's only a pile of wood, and monkeys that decided to come up with a name for the same butt supporting pile of wood.  Without disappearing down an epistemological rabbit hole, we can generally agree human knowledge is recursively defined. 
 
-So let's define the most basic abstraction of an _entity_ -- a sort of blank container for any idea. We will leave it this generic, and build out other ideeas recursively. From a POV of comp sci, an entity is a node in a graph.
+So let's define clear the slate, and pretend we are in a vacuum. We have infinite curiosity and absolutely nothing yet in existence.
 
-I also want to have a _connection_ as the other basic primitive, this one describing some sort of link between the nodes of the graph.
+The most basic abstraction we need is `entity` -- a sort of blank container for any idea or "thing". Entities themselves can be unique. We will leave it this generic, and build out other ideas recursively on top of it. From a POV of comp sci, an entity is a node in our graph.
 
-So far so good. But a little boring. Why don't we define a _human concept_ entity as an entity that has a unique to it meaning, like a human "type system" of sorts. This allows us to say, model my husky John Waters. We can define him as a unique entity _John_, and we all understand it to be this specific John. Same with his friend, sausage dog friend Bruce Willis. 
+I also want to have a `connection` as the other basic primitive, this one describing some sort of link between the nodes of the graph. A graph is really boring with only nodes and nothing connecting them (and this is a really boring argument against loneliness).
 
-At this point we are not yet discussing *how* we are storing the knowledge, how we entered it, whether it's text or a picture or the sound of their barks; Instead, let's wait to define this later. 
+So far so good. But still not very useful. Let's make something. I want to add a little character to the void and model my husky John Waters. We can define him as a unique entity `John Waters`, and we all understand it to be this specific husky John, with no other entity like him anywhere else. Same with his friend, sausage dog friend `Bruce Willis`, let's add him too. 
+
+At this point we are not yet discussing *how* we are storing the knowledge, how we entered it, whether it's text or a picture or recordings of their barks. We haven't even yet defined what a dog is. Our world knows nothing of fur, or other entities with possibly shared but unrelated names. We just have an empty void with 4 things: entities, connections, Jono and Bruce.  
 
 
-### Use case: note taking
-In an attempt to fix note taking for a forgetful ADHD brain, i've run into limitations of every piece of software for the same reasons. even when adding hyperlinking and tagging, notes become a mess. 
+### Case study: note taking
+This is my original motivator. In an attempt to fix note taking for my forgetful ADHD brain, i've run into limitations of every piece of software for the same reasons: even when adding hyperlinking and tagging, notes become a mess of trying to remember where each piece of information is stored. I struggled through academia massively: even though I could build a web of context in my mind, it became near impossible if it had to be built out of a mix of physical media, the web, PDFs and other random shit I struggled to organize and keep mapped.
 
-The issue with note taking software isn't that it's not modeling the right sort of note taking behaviour; it's that "note taking" is a paper-bound concept forever limited by the idea of a "thing" holding "text". 
+The issue with note taking software isn't that it's modeling the wrong sort of note taking behaviour; it's that "note taking" is a paper-bound concept forever limited by the idea of a "thing" holding "text". 
 
-Instead, we should question why we take notes, and solve the original problem.  The actual problem is: we need to capture information _about_ a thing. That can be text, or richer media. Instead of modeling a series of blobs of text, we can instead model an "entity", and attach meaning to it via whichever means appropriate, which may not even be written word or text altogether. 
+Instead, we should question why we take notes, and solve that original problem, which is: we are trying to capture information about a thing. That can be text in multiple languages, sound, video, whatever. Instead of modeling a series of blobs of text, we can instead model an "entity", and attach meaning to it via whichever means appropriate, which may not even be written word or text altogether. This is why it always feels so clunky to have an audio recording app while trying to take text notes, for instance. The whole thing turns into managing various sources of media by gluing it via text bound "notes".
+
+This is why text-based Notes and Evernote and even the "open canvas" Freeform and OneNote are inherently broken: they're modelling whiteboarding, not knowledge capture. They are what HTML5 tried to fix: pure presentation concern. So long as we use text based notes, we are forever stuck in a world of using `<i>` tags instead of `<strong>`. about  Anyone who's tried to have a running note while inserting images of graphs for a lecture will understand. This is also why it's so awkward to, say, merge images into a note. It becomes forever hidden inside whatever app embedded it, never to be seen by the operating system. We are effectively doing what i'm proposing with entities, but we can never leave the world of "blob of text".
 
 The benefits are gigantic: note taking itself dispenses with text entirely if wanted. E.g. how I document an entity on a bird with text and pictures will probably look different from someone who doesn't use their vision, and instead prefers to document. The necessity of a screen reader as as an input or output layer falls away.
 
