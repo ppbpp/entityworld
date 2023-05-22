@@ -6,7 +6,7 @@ documenting ideas around digitally modeling knowledge as a graph based system, w
 ## Core abstractions: entities and connections
 Entities are sort like a platonic ideal. Except of course ideals don't exist; there is no chairness of a chair, there's only a pile of wood, and monkeys that decided to come up with a name for the same butt supporting pile of wood.  Without disappearing down an epistemological rabbit hole, we can generally agree human knowledge is recursively defined. 
 
-So let's define clear the slate, and pretend we are in a vacuum. We have infinite curiosity and absolutely nothing yet in existence.
+So let's clear the slate, and pretend we are in a vacuum world. We have infinite curiosity and absolutely nothing yet in existence.
 
 The most basic abstraction we need is `entity` -- a sort of blank container for any idea or "thing". Entities themselves can be unique. We will leave it this generic, and build out other ideas recursively on top of it. From a POV of comp sci, an entity is a node in our graph.
 
@@ -38,8 +38,9 @@ Note taking in its current form is just a view into "knowledge structuring" whic
 
 
 ## Implementations
+Some concrete applications of entity modeling
 
-### Mobile app
+### Mobile note taking app
 An obvious use case I'm trying to solve personally is "dumb Evernote" style note taking with the ability to model entity purely via text entry. I want it to be as easy as tags and to "gracefully degrade" down to regular text editing for those who just want a flat note taking app. 
 
 ### Keyboard app
